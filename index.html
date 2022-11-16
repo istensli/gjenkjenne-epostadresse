@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>QUnit Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+    <script src="lib.js"></script>
+    <script>
+        QUnit.test("fix - 'epostadresse'", function (assert) {
+            const actual = checkIfIsEmail('terje@gmail');
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+
+        QUnit.test("fix - 'epostadresse'", function (assert) {
+            const actual = checkIfIsEmail('terjegmail');
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+
+        QUnit.test("fix - 'epostadresse'", function (assert) {
+            const actual = checkIfIsEmail('terje.k@gmail');
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+
+        QUnit.test("fix - 'epostadresse'", function (assert) {
+            const actual = checkIfIsEmail('terje@gmail.com');
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+
+        QUnit.test("fix - 'epostadresse'", function (assert) {
+            const actual = checkIfIsEmail('terje.k@gmail.com');
+            const expected = true;
+            assert.equal(actual, expected);
+        });
+
+        
+    </script>
+    </script>
+</body>
+</html>
